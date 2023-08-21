@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="container my-5 overflow-auto">
+        <h2 class="my-3">Product System</h2>
+        <label for="name">Product Name <span class="text-danger">*</span>:</label>
+        <input type="text" id="name" class="form-control mb-2">
+        <div id="alertName" class="alert alert-danger d-none">Should start with "Capital" and included from 2:9 character, ex " Oppo"</div>
+
+        <label for="price">Product Price <span class="text-danger">*</span>:</label>
+        <input type="number" id="price" class="form-control mb-2">
+        <div id="alertPrice" class="alert alert-danger d-none">Should start with "Number" from 10:99999, ex " 1000"</div>
+
+
+        <label for="category">Product Category <span class="text-danger">*</span>:</label>
+        <input type="text" id="category" class="form-control mb-2">
+        <div id="alertCategory" class="alert alert-danger d-none">Should start with "Capital" and included from 2:9 character, ex " Mobile "</div>
+
+        <label for="description">Product Description :</label>
+        <textarea id="description" class="form-control mb-2"></textarea>
+
+        <button id="add-btn" class="btn btn-info my-2 px-3 d-block" onclick="add()">Add Product</button>
+
+        <input oninput="search(this.value)" type="text" placeholder="Search by name ..." class="w-75 m-auto form-control mt-5">
+        <table class="table my-5 text-center">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Product Category</th>
+                    <th>Product Description	</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody" class="table-group-divider">
+
+            </tbody>
+        </table>
+    </div>
+  
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+</html>
